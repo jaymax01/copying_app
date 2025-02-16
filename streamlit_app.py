@@ -10,9 +10,9 @@ st.image('title copy app.png', width=400)
 st.write('Please remove QUOTATION MARKS " " from your files')
 st.write("")
 
-add_selectbox = st.sidebar.selectbox('What stage do you want to complete', ['Copy files', 'Sort by size', 'Rename chrome', 'Final rename', 'Album - Copy All', 'Album - Copy By Name'])
+add_selectbox = st.sidebar.selectbox('What stage do you want to complete', ['1. Copy files', '2. Sort by size', '3. Rename chrome', '4. Final rename', '5. Album - Copy All', '6. Album - Copy By Name'])
 
-if add_selectbox == 'Copy files':
+if add_selectbox == '1. Copy files':
     
     file_source = st.text_input("Please copy and paste the file location of your class EXCEL file", "")
     source_path = st.text_input("Please copy and paste the location of the MAIN file", "")
@@ -132,7 +132,7 @@ if add_selectbox == 'Copy files':
             # st.write('{} files were copied'.format(len(copied_files)))
 
 
-if add_selectbox == 'Sort by size':
+if add_selectbox == '2. Sort by size':
 
     file_source = st.text_input("Please copy and paste the file location of your class EXCEL file", "")
     path_name = st.text_input("Please enter the location of your files", "")
@@ -252,7 +252,7 @@ if add_selectbox == 'Sort by size':
             st.success("Done !")
             st.write('Your files have been moved to the format folders')
 
-if add_selectbox == 'Rename chrome':
+if add_selectbox == '3. Rename chrome':
 
     file_source = st.text_input("Please copy and paste the file location of your class EXCEL file", "")
     path_name = st.text_input("Please enter the location of your files", "")
@@ -344,7 +344,7 @@ if add_selectbox == 'Rename chrome':
             st.write('Your files have been renamed in their format folders')
 
 
-if add_selectbox == 'Final rename':
+if add_selectbox == '4. Final rename':
 
     file_source = st.text_input("Please copy and paste the file location of your class EXCEL file", "")
     path_name = st.text_input("Please enter the location of your files", "")
@@ -599,7 +599,7 @@ if add_selectbox == 'Final rename':
                                     continue
 
 
-if add_selectbox == 'Album - Copy All':
+if add_selectbox == '5. Album - Copy All':
 
     file_source = st.text_input("Please copy and paste the file location of your class EXCEL file", "")
     source_path = st.text_input("Please enter the file location of the MAIN file", "")
@@ -713,7 +713,7 @@ if add_selectbox == 'Album - Copy All':
             st.dataframe(duplicated_files)
 
 
-if add_selectbox == 'Album - Copy By Name':
+if add_selectbox == '6. Album - Copy By Name':
 
     file_source = st.text_input("Please copy and paste the file location of your class EXCEL file", "")
     source_path = st.text_input("Please enter the file location of the MAIN file", "")
